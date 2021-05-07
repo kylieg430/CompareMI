@@ -1,16 +1,43 @@
 Package: CompareMI
-Title: What the Package Does (One Line, Title Case)
+Title: A package that compares multiple imputation methods
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Kylie",
+           family = "Getz",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+           email = "kgetz1@pennmedicine.upenn.edu")
+Description: Compares denoising autoencoder and multiple imputation chained equations (MICE) methods for multiple imputation. It allows you to simulate a surivival dataset and then for the analyses any sample size can be used because Plasmode Simulations are used to sample from the data to construct a new dataset of any size. The methods can be compared using RMSE and can be compared using more clinically relevant measures. The user can choose to analyze MCAR,MAR,or MNAR.
+License: Artistic-2.0
 Encoding: UTF-8
+Depends: R (>= 3.1.0)
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Imports:
+  rmarkdown,
+  knitr,
+  testthat,
+  stats,
+  utils,
+  reshape2,
+  tensorflow,
+  survival,
+  MASS,
+  Plasmode,
+  tidyverse,
+  caret,
+  mice,
+  tidyr,
+  Metrics,
+  data.table,
+  tibble,
+  parallel,
+  foreach,
+  doParallel,
+  dplyr, 
+  reticulate,
+  ggplot2,
+  gridExtra,
+  ggpubr
+
+

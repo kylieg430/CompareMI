@@ -1,28 +1,18 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # CompareMI
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of CompareMI is to compare multiple imputation methods using RMSE and clinically relevant measures. 
+The goal of CompareMI is to compare multiple imputation methods using
+RMSE and clinically relevant measures.
 
 ## Installation
 
-You can install the released version of CompareMI from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of CompareMI from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("CompareMI")
@@ -34,11 +24,12 @@ And the development version from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("kylieg430/CompareMI")
 ```
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r, eval=F}
+``` r
 library(CompareMI)
 sdat.c <- generateData(100)
 path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
@@ -48,5 +39,3 @@ RestructureResults(mech="MCAR",size=100,wd=workingdir)
 plotResults("MCAR",-4,4,size=100,wd=workingdir)
 calcRMSE("MCAR",size=100,Data=sdat.c,pythonPath=path,wd=workingdir)
 ```
-
-
