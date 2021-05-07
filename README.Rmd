@@ -44,6 +44,7 @@ Data <- generateData(100)
 path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
 workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
 runSims("MCAR",size=100,iterations=2,sdat.c=Data,parallelOption=FALSE,pythonPath=path,wd=workingdir)
+runSims("MCAR",size=100,iterations=2,sdat.c=Data,parallelOption=TRUE,coreNum=2,pythonPath=path,wd=workingdir)
 RestructureResults(mech="MCAR",size=100,wd=workingdir)
 plotResults("MCAR",-4,4,size=100,wd=workingdir)
 calcRMSE("MCAR",size=100,sdat.c=Data,pythonPath=path,wd=workingdir)

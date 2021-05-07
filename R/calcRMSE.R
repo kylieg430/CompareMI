@@ -35,6 +35,7 @@
 #'
 calcRMSE <- function(mech,size,sdat.c,pythonPath,wd){
   setwd(wd)
+  registerDoSEQ()
   if(mech=="MCAR"){
     do.call(file.remove, list(list.files("AEDatasets", full.names = TRUE)))
 
