@@ -24,10 +24,3 @@ Writes csv with calculated RMSE for DAE and MICE
 \description{
 Title calcRMSE
 }
-\examples{
-Data <- generateData(100)
- workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
-calcRMSE("MCAR",size=100,sdat.c=Data,pythonPath=path,wd=workingdir)
-
-}

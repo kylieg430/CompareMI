@@ -27,12 +27,12 @@
 #' @importFrom utils read.csv write.csv
 #'@export calcRMSE
 #'
-#' @examples
-#' Data <- generateData(100)
-#'  workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-#' path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
-#' calcRMSE("MCAR",size=100,sdat.c=Data,pythonPath=path,wd=workingdir)
-#'
+#Examples:
+# Data <- generateData(100)
+#  workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
+# path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
+# calcRMSE("MCAR",size=100,sdat.c=Data,pythonPath=path,wd=workingdir)
+#
 calcRMSE <- function(mech,size,sdat.c,pythonPath,wd){
   setwd(wd)
   registerDoSEQ()

@@ -8,10 +8,12 @@
 #' @return Writes csv files with reorganized structure to prepare for plotting
 #' @export RestructureResults
 #'
-#' @examples
-#'  workingdir <- "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-#' RestructureResults(mech="MCAR",size=100,wd=workingdir)
 #'
+#'
+# Examples:
+#workingdir <- "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
+# RestructureResults(mech="MCAR",size=100,wd=workingdir)
+#
 RestructureResults<- function(mech,size,wd){
   setwd(wd)
   if(mech=="MCAR"){

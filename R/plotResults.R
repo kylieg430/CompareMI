@@ -14,10 +14,10 @@
 #' @return plots results comparing imputation methods and saves pdfs
 #' @export plotResults
 #'
-#' @examples
-#'  workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-#' plotResults("MCAR",-4,4,size=100,wd=workingdir)
-#'
+# Examples:
+# workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
+# plotResults("MCAR",-4,4,size=100,wd=workingdir)
+#
 plotResults <- function(mech,lowerlim,upperlim,size,wd){
   setwd(wd)
   title <- mech

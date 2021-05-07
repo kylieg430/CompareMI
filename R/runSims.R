@@ -31,11 +31,11 @@
 #' @return Writes files with information about bias and percentiles for each imputation method
 #' @export runSims
 #'
-#' @examples
-#' Data <- generateData(100)
-#' path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
-#' workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-#' runSims("MCAR",size=100,iterations=2,sdat.c=Data,parallelOption=FALSE,pythonPath=path,wd=workingdir)
+#Examples:
+# Data <- generateData(100)
+# path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
+# workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
+# runSims("MCAR",size=100,iterations=2,sdat.c=Data,parallelOption=FALSE,pythonPath=path,wd=workingdir)
 
 
 runSims <- function(mech,size,iterations,sdat.c,parallelOption,coreNum=1,pythonPath,wd){

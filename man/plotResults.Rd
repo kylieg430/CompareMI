@@ -23,8 +23,3 @@ plots results comparing imputation methods and saves pdfs
 \description{
 Title plotResults
 }
-\examples{
- workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-plotResults("MCAR",-4,4,size=100,wd=workingdir)
-
-}
