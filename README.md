@@ -4,6 +4,8 @@
 # CompareMI
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/kylieg430/CompareMI/workflows/R-CMD-check/badge.svg)](https://github.com/kylieg430/CompareMI/actions)
 <!-- badges: end -->
 
 The goal of CompareMI is to compare multiple imputation methods using
