@@ -9,7 +9,7 @@
 #' @export RestructureResults
 #'
 #' @examples
-#'  workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
+#'  workingdir <- "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
 #' RestructureResults(mech="MCAR",size=100,wd=workingdir)
 #'
 RestructureResults<- function(mech,size,wd){

@@ -3,7 +3,7 @@
 #'
 #' @param mech  Missing data mechanism of interest (e.g. MCAR,MAR,MNAR)
 #' @param size  Size of dataset you want to compare imputation methods on
-#' @param Data Dataset to sample from for plasmode simulations
+#' @param sdat.c Dataset to sample from for plasmode simulations
 #' @param pythonPath specify where on computer python is (desired version <3.8)
 #' @param wd set working directory (should contain AEDatsets folder and python script)
 #' @return Writes csv with calculated RMSE for DAE and MICE
@@ -28,12 +28,12 @@
 #'@export calcRMSE
 #'
 #' @examples
-#' sdat.c <- generateData(100)
+#' Data <- generateData(100)
 #'  workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
 #' path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
-#' calcRMSE("MCAR",size=100,Data=sdat.c,pythonPath=path,wd=workingdir)
+#' calcRMSE("MCAR",size=100,sdat.c=Data,pythonPath=path,wd=workingdir)
 #'
-calcRMSE <- function(mech,size,Data,pythonPath,wd){
+calcRMSE <- function(mech,size,sdat.c,pythonPath,wd){
   setwd(wd)
   if(mech=="MCAR"){
     do.call(file.remove, list(list.files("AEDatasets", full.names = TRUE)))

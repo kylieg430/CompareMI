@@ -3,7 +3,7 @@
 #' @param mech Missing data mechanism of interest (e.g. MCAR,MAR,MNAR)
 #' @param size Size of dataset you want to compare imputation methods on
 #' @param iterations Number of iterations for simulation
-#' @param Data Dataset to sample from for plasmode simulations
+#' @param sdat.c Dataset to sample from for plasmode simulations
 #' @param parallelOption Set equal to T if you want to parallelize
 #' @param coreNum Specify number of core if parallelizing
 #' @param pythonPath specify where on computer python is (desired version <3.8)
@@ -32,13 +32,13 @@
 #' @export runSims
 #'
 #' @examples
-#' sdat.c <- generateData(100)
+#' Data <- generateData(100)
 #' path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
 #' workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
-#' runSims("MCAR",size=100,iterations=2,Data=sdat.c,parallelOption=FALSE,pythonPath=path,wd=workingdir)
+#' runSims("MCAR",size=100,iterations=2,sdat.c=Data,parallelOption=FALSE,pythonPath=path,wd=workingdir)
 
 
-runSims <- function(mech,size,iterations,Data,parallelOption,coreNum=1,pythonPath,wd){
+runSims <- function(mech,size,iterations,sdat.c,parallelOption,coreNum=1,pythonPath,wd){
   setwd(wd)
   startWholetime <- Sys.time()
   tensorflow <- NULL
@@ -151,9 +151,12 @@ runSims <- function(mech,size,iterations,Data,parallelOption,coreNum=1,pythonPat
       # Censoring hazard
       oc1 <- coxph(Surv(sdat.c$time1 ,sdat.c$event1) ~ treat+sex+age+bp+hosp+smok+cov1+cov2+cov3+cov4, data=sdat.c, x=T)
 
+
       if(parallelOption==T){
-        doParallel::stopImplicitCluster()
-        registerDoParallel(coreNum)
+       # doParallel::stopImplicitCluster()
+      #  registerDoParallel(coreNum)
+        cl <- makeCluster(coreNum,type="SOCK")
+        registerDoParallel(cl)
       }
 
       Iter <- 1:iterations
@@ -326,7 +329,8 @@ runSims <- function(mech,size,iterations,Data,parallelOption,coreNum=1,pythonPat
         return(returnData)
       }
       if(parallelOption==T){
-        doParallel::stopImplicitCluster()
+      #  doParallel::stopImplicitCluster()
+        stopCluster(cl)
       }
 
 

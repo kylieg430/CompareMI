@@ -4,14 +4,14 @@
 \alias{calcRMSE}
 \title{Title calcRMSE}
 \usage{
-calcRMSE(mech, size, Data, pythonPath, wd)
+calcRMSE(mech, size, sdat.c, pythonPath, wd)
 }
 \arguments{
 \item{mech}{Missing data mechanism of interest (e.g. MCAR,MAR,MNAR)}
 
 \item{size}{Size of dataset you want to compare imputation methods on}
 
-\item{Data}{Dataset to sample from for plasmode simulations}
+\item{sdat.c}{Dataset to sample from for plasmode simulations}
 
 \item{pythonPath}{specify where on computer python is (desired version <3.8)}
 
@@ -25,9 +25,9 @@ Writes csv with calculated RMSE for DAE and MICE
 Title calcRMSE
 }
 \examples{
-sdat.c <- generateData(100)
+Data <- generateData(100)
  workingdir <-  "C:/Users/kgetz1/Documents/Year2/ComputingProject/GitHub/CompareMI"
 path <-  "C:/Users/kgetz1/AppData/Local/Programs/Python/Python38/python.exe"
-calcRMSE("MCAR",size=100,Data=sdat.c,pythonPath=path,wd=workingdir)
+calcRMSE("MCAR",size=100,sdat.c=Data,pythonPath=path,wd=workingdir)
 
 }

@@ -54,3 +54,10 @@ RestructureResults	0.00	0.02	0.01
 calcRMSE	33.87	 1.97	34.60	
 plotResults	0.69	0.09	0.78	
 runSims	194.89	  3.98	187.40	
+RestructureResults	0.01	0.00	0.01	
+calcRMSE	33.85	 1.93	34.50	
+plotResults	0.78	0.06	0.85	
+runSims	189.81	  3.10	186.79	
+RestructureResults	0.02	0.00	0.01	
+calcRMSE	33.32	 2.14	34.63	
+plotResults	0.76	0.03	0.79	
