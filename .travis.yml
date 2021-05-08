@@ -2,3 +2,12 @@
 
 language: R
 cache: packages
+
+cache:
+  directories:
+    - $TRAVIS_BUILD_DIR/packrat/src
+    - $TRAVIS_BUILD_DIR/packrat/lib
+  packages: true
+
+before_install:
+  - tlmgr install index
